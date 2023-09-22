@@ -41,8 +41,28 @@ Host: e.tsi.lv
           	  <p>Remember me</p> 
         	</div>
         <input type="tel" name="telnum" placeholder="+371">
-	<input type="submit" value="Submit">
+	<input type="submit" value="Submit" onclick="getPos()">
+	<p id="pos">loc</p>
 </form>
+	<input type="submit" value="Submit" onclick="getPos()">
+
+<script>
+  var userPos = document.getElementById("pos");
+
+  function getPos(){
+
+      if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPos);
+    } else {
+      userPos.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function showPos(position){
+      userPos.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
+  }
+</script>
 
 // YOUTUBE VIDEO
 
