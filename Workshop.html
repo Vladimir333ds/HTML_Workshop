@@ -12,3 +12,19 @@ name1=value1&name2=value2
 /* GET */
 
 /test_form.php?name_stid=name_id&surname_stid=surname_id&age_stid=age_id&stid=student_id&faculty_stid=faculty_id
+
+
+/* POST */
+
+POST /post HTTP/1.1
+Content-Type: application/json
+Host: e.tsi.lv
+{
+
+"StName" = "Vladimir",
+"StSurname" = "Samoylov",
+"StAge" = 20,
+"StID" = 82781,
+"Faculty" = "CompScience"
+
+}
