@@ -1,0 +1,62 @@
+<form>
+         <img id = "arrow" src = "./arrow.jpeg" style="position: relative; left: 0px; top: 0px; transform: rotate(0deg);" />
+         <p>Click button below to move the image to right</p>
+         <input type = "button" value="PUSH BEFORE STARTING" id="checkBut" onclick="check();"/>
+         <input type = "button" value = "←" class="butApp" onclick = "moveLeft();" style="display : none;"/>
+         <input type = "button" value = "→" class="butApp" onclick = "moveRight(); " style="display : none;" />
+         <input type = "button" value = "↑" class="butApp" onclick = "moveUp();" style="display : none;"/>
+         <input type = "button" value = "↓" class="butApp" onclick = "moveDown();" style="display : none;" /> 
+      </form>      
+// BUTTONS CREATED
+      <script>
+
+      // JUST A STARTING BUTTON FUNCTION, WHERE CONTROLS APPEAR AFTER CLICKING
+
+        
+         function check(){
+            let dissap = document.getElementById('checkBut');
+            let butApp = document.querySelectorAll('.butApp');
+
+            for(var i = 0 ; i < butApp.length ; i++){
+               butApp[i].style.display = "inline-block";
+               console.log(butApp[i]);
+            }
+            
+            dissap.style.display = "none";
+         }
+
+        // FUNCTION TO MOVE RIGHT
+        
+         function moveRight() {
+            let img = document.getElementById('arrow');
+            img.style.transform = 'rotate(' + 0 + 'deg)';
+            img.style.left = parseInt(img.style.left) + 10 + 'px';
+         }
+        
+             // FUNCTION TO MOVE LEFT
+        
+         function moveLeft(){
+            let img = document.getElementById('arrow');
+            img.style.transform = 'rotate(' + 180 + 'deg)';
+            img.style.left = parseInt(img.style.left) + -10 + 'px';
+         }
+
+             // FUNCTION TO MOVE UP
+
+         function moveUp(){
+            let img = document.getElementById('arrow');
+            img.style.top = parseInt(img.style.top) + -10 + 'px';
+            img.style.transform = 'rotate(' + -90 + 'deg)';
+         }
+        
+            // FUNCTION TO MOVE DOWN
+        
+         function moveDown(){
+            let img = document.getElementById('arrow');
+            img.style.transform = 'rotate(' + 90 + 'deg)';
+
+            img.style.top = parseInt(img.style.top) + 10 + 'px';
+         }
+         
+         
+   </script>
