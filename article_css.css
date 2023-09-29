@@ -1,0 +1,24 @@
+<body>   
+      <div class="style1">STYLE 1</div>   
+      <div class="style2">STYLE 2</div>   
+      <div class="style3">STYLE 3</div>   
+      <div class="style4">STYLE 4</div>   
+   </body>
+   <style>
+      .style1{
+         background-color: red;
+         text-decoration: overline;
+      }
+      .style2{
+         text-decoration: underline;
+         background-color: green;
+      }
+      .style3{
+         background-color: yellow;
+         text-decoration: line-through;
+      }
+      .style4{
+         background-color: orange;
+         text-decoration: none;
+      }
+   </style>
