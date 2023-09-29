@@ -1,0 +1,22 @@
+<form>
+         <input type="email" placeholder="EMAIL">
+         <input type="submit" id="sub">
+      </form>      
+      <script>
+
+         // USING EVENTLISTENERS
+          // MOUSE OVER         
+document.getElementById('sub').addEventListener("mouseover", function(){
+
+            let but = document.getElementById('sub');
+            but.style.background = "green";
+         });
+          // MOUSE OUT
+         document.getElementById('sub').addEventListener("mouseout", function(){
+
+            let but = document.getElementById('sub');
+            but.style.background = "#efefef";
+         
+         });
+         
+   </script>
