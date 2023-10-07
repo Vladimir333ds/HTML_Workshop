@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.itemAnim1 { 
+  -webkit-transform:rotate(360deg);
+  -webkit-transition-duration: 5s;}
+</style>
+<body>
+
+
+<!-- JQUERY ANIMATION SECTION -->
+<div class="w3-black">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 800px;" id="custom">
+        <h2 class="w3-wide">! THE ANIMATION SECTION !</h2>
+        <p class="w3-opacity"><i>JQUERY ANIMATIONS</i></p>
+        <div class="w3-row w3-padding-32">
+            <button id="jqBtnAnim1" style="position: relative;">animation 1</button>
+            <div id="jqDivAnim1" style="width: 100px; height: 100px; background-color: blue; position: relative;"></div>
+            <button id="jqBtnAnim2" style="position: relative;">animation 2</button>
+            <div id="jqDivAnim2" style="width: 100px; height: 100px; background-color: rgb(255, 0, 119); position: relative;"></div>
+            <button id="jqBtnAnim3">animation 3</button>
+            <div id="jqDivAnim3" style="width: 100px; height: 100px; background-color: rgb(30, 255, 0); position: relative;"></div>
+            <button id="jqBtnReset">RESET</button>
+        </div>
+    </div>
+</div>
+
+    <script>
+    //jquery
+
+    $(document).ready(function(){  
+            $('#jqBtnAnim1').click(function(){  
+            // $('#jqDivAnim1').toggleClass("itemAnim1");
+            $('#jqBtnAnim1').animate({
+                top: '50px',
+                left: '115px'
+            },3900);
+            $('#jqDivAnim1').animate({
+                right: '100px',  
+                opacity: '0.5',  
+                height: '100px',  
+                width: '100px'  
+            },3000);
+            $('#jqDivAnim1').animate({
+                left: '350px'
+            },1000);
+            $('#jqBtnAnim1').animate({
+               left: '500px', 
+            },450);
+            
+            });  
+
+            $('#jqBtnAnim2').on('mouseover', function() {
+                $(this).animate({
+                    top: Math.random() * window.innerHeight + "px",
+                    left: Math.random() * window.innerWidth + "px"
+                });
+            })
+
+            $('#jqDivAnim2').on('mouseover', function() {
+                $(this).animate({
+                    top: Math.random() * window.innerHeight + "px",
+                    left: Math.random() * window.innerWidth + "px"
+                });
+            })
+
+            $('#jqBtnAnim3').click(function(){
+                $('#jqDivAnim3').animate({
+                    bottom: '140px',
+                })
+            })
+
+            $('#jqBtnReset').click(function(){
+                $('#jqDivAnim1').animate({
+                    left: '0',
+                    right: '0',
+                    top: '0',
+                    bottom: '0'
+
+                },1000)
+                $('#jqBtnAnim1').animate({
+                    left: '0',
+                    right: '0',
+                    top: '0',
+                    bottom: '0'
+
+                },1000)
+                $('#jqDivAnim2').animate({
+                    left: '0',
+                    right: '0',
+                    top: '0',
+                    bottom: '0'
+
+                },1000)
+                $('#jqBtnAnim2').animate({
+                    left: '0',
+                    right: '0',
+                    top: '0',
+                    bottom: '0'
+                })
+                $('#jqDivAnim3').animate({
+                    bottom: '0'
+                })
+            })
+
+            
+        });  
+
+    </script>
+     <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    </body>
+</html>
